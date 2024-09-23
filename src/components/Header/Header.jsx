@@ -63,8 +63,9 @@ const Header = ({ handleSelect = null }) => {
       
         <div className="mb-2 md:mb-0 sm:mx-5  mr-2">
           <Typography variant="h5" className="text-white" sx={{  cursor: "pointer", fontWeight: "bold" }} onClick={() => navigate("/")}>
-            MINISTER Home
+            MINISTER Home Master Branch 
           </Typography>
+          
         </div>
         
 
