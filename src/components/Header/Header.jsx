@@ -59,11 +59,11 @@ const Header = ({ handleSelect = null }) => {
 
   return (
     <>
-      <div className="flex  border-b-2 pb-2 border-primary-blue justify-between items-center pt-4 sm:mt-0  px-4 md:px-0 relative">
-        {/* Logo */}
+      <div className="fixed z-10 bg-primary-darkblue top-0 left-0 flex  border-b-2 pb-5 px-10  justify-between items-center pt-4 sm:mt-0  w-full">
+      
         <div className="mb-2 md:mb-0 sm:mx-5  mr-2">
-          <Typography variant="h4" className="text-primary-blue" sx={{  cursor: "pointer", fontWeight: "medium" }} onClick={() => navigate("/")}>
-            Minister
+          <Typography variant="h5" className="text-white" sx={{  cursor: "pointer", fontWeight: "bold" }} onClick={() => navigate("/")}>
+            MINISTER Home
           </Typography>
         </div>
         
