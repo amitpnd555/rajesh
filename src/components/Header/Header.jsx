@@ -4,23 +4,34 @@ import {
   Box,
   Divider,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
 
+  Menu,
+
+  MenuItem,
+
   Typography,
 } from "@mui/material";
 import { Outlet, useNavigate } from "react-router-dom";
+import { FaFacebook } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Search", path: "/search" },
 ];
 
-const drawerWidth = 240;
+const drawerWidth = 230;
 const Header = ({ handleSelect = null }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const pages = ['Home', 'About', 'Press and Media', 'Contact'];
+  const socialMediaIcon = [<FaFacebook />, <FaTwitter />,<FaInstagram />, <FaYoutube />];
   const navigate = useNavigate();
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -32,7 +43,7 @@ const Header = ({ handleSelect = null }) => {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography
         variant="h6"
-        sx={{ marginTop: 4, marginLeft: 10, paddingBottom: 2 }}
+        sx={{ marginTop: 4, paddingBottom: 2 , fontWeight: "bold" }}
         onClick={() => {
           navigate("/");
         }}
@@ -41,32 +52,54 @@ const Header = ({ handleSelect = null }) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item?.name} disablePadding>
+        {pages.map((item) => (
+          <ListItem key={item} disablePadding>
             <ListItemButton
-              sx={{ textAlign: "center" }}
+              sx={{ ml: 7, textAlign: "left" }}
               onClick={() => {
-                navigate(item?.path);
+                navigate(item);
               }}
             >
-              <ListItemText primary={item?.name} />
+              <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
+
     </Box>
   );
 
+ 
   return (
     <>
       <div className="fixed z-10 bg-primary-darkblue top-0 left-0 flex  border-b-2 pb-5 px-10  justify-between items-center pt-4 sm:mt-0  w-full">
       
         <div className="mb-2 md:mb-0 sm:mx-5  mr-2">
           <Typography variant="h5" className="text-white" sx={{  cursor: "pointer", fontWeight: "bold" }} onClick={() => navigate("/")}>
-            MINISTER Home Master Branch 
+            MINISTER Home
           </Typography>
           
         </div>
+
+        
+        <Box className=" flex justify-between  max-w-80" sx={{ flexGrow: 1, display: { xs: 'none', md : 'flex' } ,  }}>
+           
+            
+              {pages.map((page) => (
+                  <Typography  sx={{ textAlign: 'center', fontWeight : '500' , color : 'white'  }}>{page}</Typography>
+              ))}
+          
+          </Box>
+
+          <Box className=" flex justify-between  max-w-64" sx={{ flexGrow: 1, display: { xs: 'none', md : 'flex' } ,  }}>
+           
+            
+              {socialMediaIcon.map((mediaIcons) => (
+                  <Typography  sx={{ textAlign: 'center', fontWeight : '500' , color : 'white', fontSize : '28px' }}>{mediaIcons}</Typography>
+              ))}
+          
+          </Box>
+          
         
 
         
@@ -79,8 +112,8 @@ const Header = ({ handleSelect = null }) => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
+              strokeWidth={3}
+              stroke="white"
               className="w-6 h-6"
             >
               <path
@@ -124,4 +157,37 @@ const Header = ({ handleSelect = null }) => {
   );
 };
 
+
+
 export default Header;
+
+function SearchInput({ value, onChange }) {
+  return (
+    <div className="flex items-center bg-white rounded-lg p-1 pl-3 pr-2">
+      <input
+        type="text"
+        className="w-full outline-none"
+        placeholder="Search for a movie"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-6 h-6"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M21 21l-5.2-5.2"
+        />
+        <circle cx={10} cy={10} r={8} />
+      </svg>
+    </div>
+  );
+}
+
+

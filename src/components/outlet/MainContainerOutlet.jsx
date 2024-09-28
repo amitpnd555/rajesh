@@ -6,7 +6,7 @@ const MainContainerOutlet = () => {
   return (
     <div className="flex gap-2 flex-col ">
       <Header />
-      <div className="mt-16">
+      <div className="mt-4">
         <Outlet />
       </div>
     </div>
