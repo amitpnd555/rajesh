@@ -1,30 +1,31 @@
 import React from 'react'
 import VisionaryCard from './VisionaryCard'
+import image7 from "../../../public/images/image7.jpg"
 
 const visionaryDataList = [
     {
-        title: 'Nitin Gadkari A Visionary',
-        description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
-        image: 'https://nitingadkari.org.in/wp-content/uploads/elementor/thumbs/Nitin-gadkari-1-qb1qlamuruodkez57uohkq97dn2q27t3svuoxretao.webp',
-        readMoreLink : 'https://nitingadkari.org.in/'
+        title: "RAJESH'S Biography",
+        description: 'Introduction about rajesh shukla',
+        image: '../../../public/images/image7.jpg',
+        readMoreLink : '#'
     },
     {
-        title: 'Nitin Gadkari A Visionary',
-        description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
-        image: 'https://nitingadkari.org.in/wp-content/uploads/elementor/thumbs/Nitin-gadkari-1-qb1qlamuruodkez57uohkq97dn2q27t3svuoxretao.webp',
-        readMoreLink : 'https://nitingadkari.org.in/'
+        title: 'Political Belief',
+        description: 'Political belief of Rajesh Shukla',
+        image: '../../../public/images/image7.jpg',
+        readMoreLink : '#'
     },
     {
-        title: 'Nitin Gadkari A Visionary',
-        description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
-        image: 'https://nitingadkari.org.in/wp-content/uploads/elementor/thumbs/Nitin-gadkari-1-qb1qlamuruodkez57uohkq97dn2q27t3svuoxretao.webp',
-        readMoreLink : 'https://nitingadkari.org.in/'
+        title: 'Karyakarta',
+        description: 'Rajesh Shukla as an Karyakarta',
+        image: '../../../public/images/image7.jpg',
+        readMoreLink : '#'
     },
     {
-        title: 'Nitin Gadkari A Visionary',
-        description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
-        image: 'https://nitingadkari.org.in/wp-content/uploads/elementor/thumbs/Nitin-gadkari-1-qb1qlamuruodkez57uohkq97dn2q27t3svuoxretao.webp',
-        readMoreLink : 'https://nitingadkari.org.in/'
+        title: 'Public Service As a MLA',
+        description: 'Public Services done as a MLA',
+        image: '../../../public/images/image7.jpg',
+        readMoreLink : '#'
     },
 ];
 
